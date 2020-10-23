@@ -19,7 +19,7 @@ pipeline {
 		}
 
 		}
-	
+}	
 	
 
 	def getDockerTag(){
