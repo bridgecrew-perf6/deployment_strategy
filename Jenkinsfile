@@ -11,12 +11,11 @@ pipeline {
 		}
 		stage('Dockerhub push'){
 		steps{
-             withCredentials([string(credentialsId: 'dockerhub_password', variable: 'dockerhub-pass')]) {
-                sh "docker login -u mohankrish3  -p ${dockerhub-pass}"
+             
+                sh "docker login -u mohankrish3  -p m9440681391"
 				sh "docker push mohankrish3/app:${Docker_tag}"
     
-            }
-		}
+            		}
 
 		}
 		stage('Run the Ansible playbook and initiate the new container'){
