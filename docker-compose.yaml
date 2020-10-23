@@ -5,7 +5,7 @@ services:
     container_name: app
     restart: always
     ports:
-      - "80:80"
+      - "8090:80"
       - "5672:5672"
       - "6379:6379"
       - "9200:9200"
