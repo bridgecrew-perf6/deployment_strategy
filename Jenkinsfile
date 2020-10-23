@@ -12,14 +12,18 @@ pipeline {
 		stage('Dockerhub push'){
 		steps{
             withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerhub-password', usernameVariable: 'dockerhub')]) {
-				sh "docker login -u ${dockerhub}  -p ${dockerhub-password}"
+				sh "docker login -u mohankrish3  -p ${dockerhub-password}"
 				sh "docker push mohankrish3/app:${Docker_tag}"
             }
 			}
+            withCredentials([string(credentialsId: 'dockerhub_password', variable: 'dockerhub-pass')]) {
+                sh "docker login -u mohankrish3  -p ${dockerhub-pass}"
+				sh "docker push mohankrish3/app:${Docker_tag}"
+    
+            }
 		}
 
 		}
-}	
 	
 
 	def getDockerTag(){
