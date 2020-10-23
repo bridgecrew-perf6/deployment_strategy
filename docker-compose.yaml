@@ -1,7 +1,7 @@
 version: '2'
 services:
   app:
-    image: mohankrish3/app:xxx
+    image: mohankrish3/app:dockertag
     container_name: app
     restart: always
     ports:
