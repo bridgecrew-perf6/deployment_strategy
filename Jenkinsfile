@@ -21,7 +21,7 @@ pipeline {
 		stage('Run the Ansible playbook and initiate the new container'){
 			steps{
 				sh '''
-                                       sed -i "s_dockertag_$Docker_tag_g" docker-compose.yaml
+                                       sed -i "s:dockertag:$Docker_tag:g" docker-compose.yaml
 				       ansible-playbook ansible-playbook.yaml
                                 '''
 			}
