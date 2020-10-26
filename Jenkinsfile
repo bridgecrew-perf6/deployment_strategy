@@ -12,7 +12,7 @@ pipeline {
                 stage('Dockerhub push'){
                 steps{
                     withCredentials([string(credentialsId: 'dockerhub_password', variable: 'dockerhub')]) {
-                        sh "docker login -u mohankrishnav -p $dockerhub"
+                        sh "docker login dockerhub.kensium.com -u mohankrishnav -p $dockerhub"
                     }
                          sh "docker push dockerhub.kensium.com/millervet/app:${Docker_tag}"
                      }
