@@ -12,9 +12,9 @@ services:
       - "15672:15672"
     tty: true
     volumes:
-      - /home/mohan/millervet/stg/:/var/www/html/
+      - /home/mohan/millervet/html/:/var/www/html/
       - /home/mohan/millervet/logs/:/var/logs/millervet/
-      - /home/mohan/millervet/db/:/var/lib/mysql/
+      - /home/mohan/millervet/database/:/var/lib/mysql/
     networks:
       app:
        ipv4_address: 10.0.0.2
