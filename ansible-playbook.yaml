@@ -1,4 +1,4 @@
-- hosts: magento
+- hosts: testserver
   tasks:
     - name: Copy the docker-compose file to the node
       copy:
