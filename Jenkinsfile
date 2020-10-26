@@ -6,15 +6,15 @@ pipeline {
         stages{
         stage('Build docker image'){
                 steps{
-                        sh "docker build . -t mohankrish3/app:${Docker_tag}"
+                        sh "docker build . -t dockerhub.kensium.com/millervet/app:${Docker_tag}"
                 }
                 }
                 stage('Dockerhub push'){
                 steps{
                     withCredentials([string(credentialsId: 'dockerhub_password', variable: 'dockerhub')]) {
-                        sh "docker login -u mohankrish3 -p $dockerhub"
+                        sh "docker login -u mohankrishnav -p $dockerhub"
                     }
-                         sh "docker push mohankrish3/app:${Docker_tag}"
+                         sh "docker push dockerhub.kensium.com/millervet/app:${Docker_tag}"
                      }
 
                 }

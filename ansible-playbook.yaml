@@ -3,7 +3,7 @@
     - name: Copy the docker-compose file to the node
       copy:
         src: docker-compose.yaml
-        dest: /home/ubuntu
+        dest: /home/ubuntu/millervet/
     - name: Delete the docker container
       command: docker-compose down
     - name: Start the new container

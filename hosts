@@ -10,6 +10,8 @@
 
 # Ex 1: Ungrouped hosts, specify before any group headers.
 magento ansible_host=172.31.2.108 ansible_connection=ssh ansible_ssh_port=22 ansible_sudo_pass=ubuntu ansible_user=ubuntu ansible_ssh_pass=Krish123
+pavan ansible_host=192.168.8.205 ansible_connection=ssh ansible_ssh_port=2265 ansible_sudo_pass=pavanj ansible_user=pavanj ansible_ssh_pass=Pk.psp@5107
+testserver ansible_host=111.93.25.91 ansible_connection=ssh ansible_ssh_port=22 ansible_sudo_pass=ubuntu ansible_user=ubuntu ansible_ssh_pass=phahv2Pah0eega0
 #green.example.com
 #blue.example.com
 #192.168.100.1

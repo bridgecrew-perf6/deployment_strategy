@@ -1,7 +1,7 @@
 version: '2'
 services:
   app:
-    image: mohankrish3/app:dockertag
+    image: dockerhub.kensium.com/millervet/app:dockertag
     container_name: app
     restart: always
     ports:
@@ -12,7 +12,9 @@ services:
       - "15672:15672"
     tty: true
     volumes:
-      - /data/:/var/www/html/
+      - /home/ubuntu/millervet/stg/:/var/www/html/
+      - /home/ubuntu/millervet/logs/:/var/logs/millervet/
+      - /home/ubuntu/millervet/db/:/var/lib/mysql/
     networks:
       app:
        ipv4_address: 10.0.0.2
